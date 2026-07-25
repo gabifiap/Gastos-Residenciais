@@ -76,7 +76,7 @@ Caso seja feita uma tentativa de cadastrar uma receita para um menor de idade, a
 
 ---
 
-# 🏛 Arquitetura
+# Arquitetura
 
 O backend foi desenvolvido seguindo uma arquitetura em camadas, buscando separação de responsabilidades e facilidade de manutenção.
 
@@ -104,7 +104,7 @@ Cada camada possui uma responsabilidade específica:
 
 ---
 
-# 🌐 Aplicação Publicada
+# Aplicação Publicada
 
 | Serviço | Link |
 |----------|------|
