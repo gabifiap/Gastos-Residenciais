@@ -35,6 +35,13 @@ builder.Services.AddCors(options =>
     });
 });
 
+// Em produção (Render, etc.), a porta é definida pela variável de ambiente
+// PORT. Localmente, continuamos usando a porta configurada no launchSettings.json.
+var porta = Environment.GetEnvironmentVariable("PORT");
+if (!string.IsNullOrEmpty(porta))
+{
+    builder.WebHost.UseUrls($"http://0.0.0.0:{porta}");
+}
 var app = builder.Build();
 
 app.UseCors(PoliticaCors);

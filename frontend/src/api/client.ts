@@ -6,7 +6,7 @@ import type {
   Transacao,
 } from "./types";
 
-const BASE_URL = "http://localhost:5003/api";
+const BASE_URL = import.meta.env.VITE_API_URL ?? "http://localhost:5003/api";
 
 /** Erro lançado quando a API retorna uma resposta de erro (4xx/5xx). */
 export class ApiError extends Error {}
