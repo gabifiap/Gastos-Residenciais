@@ -65,7 +65,7 @@ Caso seja feita uma tentativa de cadastrar uma receita para um menor de idade, a
 
 ---
 
-# 🛠 Tecnologias Utilizadas
+# Tecnologias Utilizadas
 
 | Backend | Frontend | Hospedagem |
 |---------|----------|------------|
