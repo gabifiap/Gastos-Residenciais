@@ -1,0 +1,15 @@
+# Backend (.NET)
+backend/bin/
+backend/obj/
+
+# Frontend (Node / Vite)
+frontend/node_modules/
+frontend/dist/
+
+# Arquivos de configuração de IDE
+.vs/
+.vscode/
+*.user
+
+# Dados de teste gerados em tempo de execução (persistência local)
+backend/bin/Debug/net10.0/Data/

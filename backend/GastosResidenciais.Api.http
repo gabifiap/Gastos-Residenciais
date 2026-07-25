@@ -1,0 +1,84 @@
+@baseUrl = http://localhost:5003/api
+
+### Listar pessoas
+GET {{baseUrl}}/pessoas
+
+### Criar uma pessoa
+POST {{baseUrl}}/pessoas
+Content-Type: application/json
+
+{
+  "nome": "Maria Souza",
+  "idade": 32
+}
+
+### Criar uma pessoa menor de idade
+POST {{baseUrl}}/pessoas
+Content-Type: application/json
+
+{
+  "nome": "João Filho",
+  "idade": 15
+}
+### Criar uma pessoa adulta
+POST {{baseUrl}}/pessoas
+Content-Type: application/json
+
+{
+  "nome": "Ana Adulta",
+  "idade": 30
+}
+
+### Criar uma pessoa menor de idade
+POST {{baseUrl}}/pessoas
+Content-Type: application/json
+
+{
+  "nome": "Pedro Menor",
+  "idade": 15
+}
+### Despesa para Ana (adulta) - deve funcionar
+POST {{baseUrl}}/transacoes
+Content-Type: application/json
+
+{
+  "descricao": "Supermercado",
+  "valor": 250.50,
+  "tipo": "Despesa",
+  "pessoaId": "6fb62a1b-8a7a-42cb-a14a-cdf01b902f26"
+}
+
+### Receita para Ana (adulta) - deve funcionar
+POST {{baseUrl}}/transacoes
+Content-Type: application/json
+
+{
+  "descricao": "Salário",
+  "valor": 3000,
+  "tipo": "Receita",
+  "pessoaId": "6fb62a1b-8a7a-42cb-a14a-cdf01b902f26"
+}
+
+### Despesa para Pedro (menor) - deve funcionar
+POST {{baseUrl}}/transacoes
+Content-Type: application/json
+
+{
+  "descricao": "Lanche",
+  "valor": 15,
+  "tipo": "Despesa",
+  "pessoaId": "7cedde38-1e14-4055-b495-9e9aea90d7e3"
+}
+
+### Receita para Pedro (menor) - DEVE SER REJEITADA
+POST {{baseUrl}}/transacoes
+Content-Type: application/json
+
+{
+  "descricao": "Mesada",
+  "valor": 100,
+  "tipo": "Receita",
+  "pessoaId": "7cedde38-1e14-4055-b495-9e9aea90d7e3"
+}
+### Consultar totais
+GET {{baseUrl}}/totais
